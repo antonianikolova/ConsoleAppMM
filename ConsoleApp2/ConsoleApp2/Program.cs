@@ -21,7 +21,7 @@ namespace ConsoleApp2
                     Console.WriteLine("This is not a valid value for N! Please insert a valid Odd Value for Letter weight N (2 < N < 10 000) N = ");
                     n = Console.ReadLine();
                 }
-                else if (value%2==0)
+                else if (value%2 == 0 || value <= 2 || value >= 10000)
                 {
                     Console.WriteLine("This is not a Odd value! Please insert a valid Odd Value for Letter weight N (2 < N < 10 000) N = ");
                     n = Console.ReadLine();

@@ -18,12 +18,12 @@ namespace ConsoleApp2
             {
                 if (!int.TryParse(n, out value))
                 {
-                    Console.WriteLine("This is not a valid value for N! Please insert a valid Odd Value for Letter weight N (2 < N < 10 000) N = ");
+                    Console.WriteLine("This is not a valid value for N! Please insert a valid Odd number Value for Letter weight N (2 < N < 10 000) N = ");
                     n = Console.ReadLine();
                 }
                 else if (value%2 == 0 || value <= 2 || value >= 10000)
                 {
-                    Console.WriteLine("This is not a Odd value! Please insert a valid Odd Value for Letter weight N (2 < N < 10 000) N = ");
+                    Console.WriteLine("This is not a valid value for N! Please insert a valid Odd number Value for Letter weight N (2 < N < 10 000) N = ");
                     n = Console.ReadLine();
                 }
                 else
@@ -45,40 +45,43 @@ namespace ConsoleApp2
                         { 
                             Console.Write("*");
                         }
-                    if (2 * i < value)
-                    {
-                        for (int k3 = 0; k3 < 2 * i; k3++)
+
+                        if (2 * i < value)
                         {
-                            Console.Write("*");
+                            for (int k3 = 0; k3 < 2 * i; k3++)
+                            {
+                                Console.Write("*");
+                            }
+                            for (int k4 = 0; k4 < value - (2 * i); k4++)
+                            {
+                                Console.Write("-");
+                            }
+                            for (int k5 = 0; k5 < 2 * i; k5++)
+                            {
+                                Console.Write("*");
+                            }
                         }
-                        for (int k4 = 0; k4 < value - (2 * i); k4++)
+                        else
                         {
-                            Console.Write("-");
+                            for (int k3 = 0; k3 < 2 * i - value; k3++)
+                            {
+                                Console.Write("-");
+                            }
+                            for (int k4 = 0; k4 < 3*value - (2*i); k4++)
+                            {
+                                Console.Write("*");
+                            }
+                            for (int k5 = 0; k5 < 2 * i - value; k5++)
+                            {
+                                Console.Write("-");
+                            }
                         }
-                        for (int k5 = 0; k5 < 2 * i; k5++)
-                        {
-                            Console.Write("*");
-                        }
-                    }
-                    else
-                    {
-                        for (int k3 = 0; k3 < 2 * i - value; k3++)
-                        {
-                            Console.Write("-");
-                        }
-                        for (int k4 = 0; k4 < 3*value - (2*i); k4++)
-                        {
-                            Console.Write("*");
-                        }
-                        for (int k5 = 0; k5 < 2 * i - value; k5++)
-                        {
-                            Console.Write("-");
-                        }
-                    }
+
                         for (int k6 = 0; k6< value; k6++)
                         {
                             Console.Write("*");
                         }
+
                         for (int k7 = value - i; k7 > 0; k7--)
                         {
                              Console.Write("-");
